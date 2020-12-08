@@ -1,0 +1,74 @@
+#page-heading{
+    margin-left: 38%;
+}
+.contact-list-container{
+    display: flex;
+    text-align: center;
+}
+.contact-list-container ul{
+    margin-left: 34vw;
+    text-align: center;
+}
+
+.contact {
+    display: flex;
+    height: 6.5vh;
+    width: 70vw;
+    /* background-color: #FFEBEE; */
+    /* display: block; */
+    /* display: inline-block; */
+    list-style: none;
+}
+.details{
+    display: flex;
+    background-color: #4CB1F7;
+    height: 6vh;
+    width: 24vw;
+    /* display: inline-block; */
+    /* display: block; */
+    justify-content: space-between;
+    margin-left: 46%;
+    
+}
+.details p{
+    display: flex;
+    color: white;
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 1vh;
+}
+
+/* .submit-form{
+    text-align: center;
+} */
+
+button{
+    background-color: black;
+    color: white;
+
+}
+
+.delete-button {
+    background-color: white;
+    
+    height: 6vh;
+    width: 3vw;
+}
+
+.delete-button a{
+    text-align: center;
+    height: 6vh;
+    color: red;
+    margin-left: 10%;
+}
+.delete-icon{
+    margin-top: 2.3vh;
+}
+
+input{
+    border-color: lightcyan;
+}
+
+form{
+    margin-left: 35%;
+}

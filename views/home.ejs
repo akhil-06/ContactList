@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            <%= title %>
+        </title>
+        <script src="https://kit.fontawesome.com/22748096c7.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <h1 id="page-heading">
+            <i class="fas fa-address-book"></i>
+            My Contacts List
+        </h1>
+
+        <div id="contacts-list-container">
+            <ul>
+                <% for (let i of contact_list) { %>
+                    <li class="contact">
+                                <div class="details">
+                                    <p><%= i.name %></p>          
+                                    <p><%= i.phone %></p> 
+                                </div> 
+                                <div class="delete-button">
+                                <!-- delete button's icon a tag link and giving the route of controller '/delete-contact' and passing the i.phone
+                                    by using this link whenever we click on the particular contact it will fetch the phone of that contact
+                                    like <a href='delete-contact/1111'> -->
+                                    <a href="/delete-contact/?id=<%= i._id %>">
+                                        <i class="fas fa-window-close delete-icon"></i>
+                                    </a>
+                                </div>   
+                    </li>
+                 <% } %>
+            </ul>
+        </div>
+
+        
+
+        <form action="/create-contact" method="POST">
+            <input type="text" name="name" placeholder="Enter Name" required>
+            <input type="number" name="phone" placeholder="Enter Phone" required>
+
+            <button type="submit"> Add </button>
+
+        </form>
+
+    <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>
